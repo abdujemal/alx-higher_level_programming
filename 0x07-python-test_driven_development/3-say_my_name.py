@@ -1,16 +1,14 @@
 #!/usr/bin/python3
-"""Module containing a function to print first and last name"""
+"""
+A function that prints My name is <first name> <last name>
+"""
 
 
 def say_my_name(first_name, last_name=""):
-    """ prints first and last name
-        Arguments:
-            @first_name: first name to be printed
-            @second_name: last_name to be printed
-    """
-
-    if type(first_name) is not str:
+    """function that print complete name"""
+    if type(first_name) != str or first_name == "":
         raise TypeError("first_name must be a string")
-    if type(last_name) is not str:
+    if type(last_name) != str:
         raise TypeError("last_name must be a string")
+    """print(f"{My name is {first_name} {last_name}")"""
     print("My name is {} {}".format(first_name, last_name))
